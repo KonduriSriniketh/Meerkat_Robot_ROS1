@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+		<include file="$(find meerkat_launch)/launch/base.launch"/>
+		<group ns="meerkat">
+			<arg name="map_file" default="$(find meerkat_maps)/maps/idcmap.yaml"/>
+  			<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+		</group>  
+		<include ns="meerkat" file="$(find amcl)/launch/meerkat_amcl.launch" />
+		<include ns="meerkat" file="$(find move_base)/launch/meerkat_move_base1.launch"/>
+		
+		<node type="rviz" name="rviz" pkg="rviz" args="-d $(find meerkat_config)/rviz/navigation.rviz" />
+
+
+</launch>
+

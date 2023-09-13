@@ -1,0 +1,6 @@
+<launch>
+  <arg name="model" />
+  <param name="robot_description" textfile="$(find meerkat_description)/urdf/meerkat_description.urdf" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+</launch>

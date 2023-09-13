@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+	<node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find meerkat_base)/meerkat_base/rviz/nav.rviz" />
+	
+</launch>
+
+

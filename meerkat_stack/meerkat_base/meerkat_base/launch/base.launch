@@ -1,0 +1,14 @@
+<launch>
+  <!-- <node pkg='tf' type="static_transform_publisher" name="odom_to_baselink" args = " 0 0 0 0 0 0 odom base_link 30" /> -->
+  <node pkg='tf' type="static_transform_publisher" name="baselink_to_laser" args = " 0.2 0 0 0 0 0 base_link laser 100" />
+  <node pkg='tf' type="static_transform_publisher" name="base_link_to_IMU" args = " 0 0 0 1.570 0 0  base_link vectornav 100" />
+  <node pkg='tf' type="static_transform_publisher" name="base_link_to_camera" args = " 0.4 0 0 0 0 0  base_link camera_link 100" />
+	<!-- <include file="$(find realsense2_camera)/launch/rs_aligned_depth.launch" /> -->
+  <include ns="meerkat" file="$(find sick_tim)/launch/meerkat_sick.launch" />
+	<!-- <include ns="meerkat" file="$(find usb_cam)/launch/usb_cam-test.launch" /> -->
+	<include ns="meerkat" file="$(find vectornav)/launch/vectornav.launch" />
+	<include ns="meerkat" file="$(find meerkat_wheel)/launch/wheels_fused_odom.launch" />
+  <!-- <include file="$(find meerkat_joystick)/launch/joy.launch" /> -->
+  <include file="$(find joy_control)/launch/joy.launch" />
+  <include file="$(find meerkat_launch)/launch/ekf.launch" />
+</launch>

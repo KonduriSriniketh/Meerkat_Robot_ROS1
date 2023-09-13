@@ -1,0 +1,12 @@
+#joystck parameters
+speed_factor : 0.1
+reset_flag : false
+start_flag : false
+mode_xinput : false
+mode_normal : false
+
+#ros parameters
+loop_rate : 10
+cmd_vel_topic : "/meerkat/cmd_vel"
+joy_topic  :    "joy"
+joy_state_topic : "joy_state"

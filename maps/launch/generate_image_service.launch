@@ -1,0 +1,5 @@
+<launch>
+  <node name="generate_image_server_node" pkg="maps" type="service.py" output="screen">
+  </node>
+</launch>
+

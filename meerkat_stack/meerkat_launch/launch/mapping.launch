@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+	<!-- <include file="$(find  meerkat_base)/launch/base.launch"/> -->
+	<include file="$(find gmapping)/launch/slam_gmapping_pr2.launch"/>
+	<node type="rviz" name="rviz" pkg="rviz" args="-d $(find meerkat_launch)/rviz/mapping.rviz"/>
+
+</launch>

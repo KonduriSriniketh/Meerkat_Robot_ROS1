@@ -1,0 +1,30 @@
+# df_paw parameters
+
+paw_port : /dev/meerkat_motors
+# paw_port : /dev/ttyUSB1
+baud_rate : 115200
+paw_frame : base_link
+paw_left_id: 2
+paw_right_id: 1
+
+cmd_topic: cmd_vel
+cb_timeout : 1
+claw_addr : 128
+allow_cmd_timeout : true
+gear_ratio: 30
+
+
+#common parameters
+speed_topic : wheelspeed
+voltage_topic: motor_voltage
+wheel_radius : 0.1
+wheel_base : 0.44
+loop_rate  : 15
+
+#odom parameters
+odom_topic : wheelodom
+broadcast_odom_tf : false
+speed_cb_timeout : 0.5
+
+#imu topic name 
+# _imu_topic_name

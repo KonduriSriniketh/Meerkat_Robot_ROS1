@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="meerkat_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.127151836912334 -1.69137146294185E-06 0.0975928139368248"
+        rpy="0 0 0" />
+      <mass
+        value="9.66682821677267" />
+      <inertia
+        ixx="0.126365358178264"
+        ixy="1.45001745218774E-06"
+        ixz="-0.00587780021659437"
+        iyy="0.214301988325745"
+        iyz="-3.03715685642234E-06"
+        izz="0.271689019304598" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meerkat_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meerkat_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="laser">
+    <inertial>
+      <origin
+        xyz="-0.00179762627775883 -1.00146367219001E-05 -0.0259294227638412"
+        rpy="0 0 0" />
+      <mass
+        value="0.208749189617539" />
+      <inertia
+        ixx="0.000140549260165937"
+        ixy="2.33101300183652E-08"
+        ixz="2.55929309361593E-06"
+        iyy="0.000137324824215784"
+        iyz="-3.02344969732135E-08"
+        izz="9.27932563448145E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meerkat_description/meshes/laser.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meerkat_description/meshes/laser.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixed_1"
+    type="fixed">
+    <origin
+      xyz="0.16555 -3.2607E-05 0.31707"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="-0.0131722267740443 -0.00168231615133116 -7.05917314882121E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0381911718464115" />
+      <inertia
+        ixx="2.35737137420088E-05"
+        ixy="-4.5104419786091E-08"
+        ixz="1.4323143025451E-08"
+        iyy="2.11168812559004E-06"
+        iyz="-8.06854477497741E-09"
+        izz="2.22571349730384E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meerkat_description/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meerkat_description/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixed_2"
+    type="fixed">
+    <origin
+      xyz="0.42761 -0.0025714 0.23159"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="vectornav">
+    <inertial>
+      <origin
+        xyz="-0.00106813604685474 8.71594019180577E-10 -0.0124548303738239"
+        rpy="0 0 0" />
+      <mass
+        value="0.0384276977819966" />
+      <inertia
+        ixx="5.98543550052429E-06"
+        ixy="2.00606574762456E-13"
+        ixz="8.71743857203315E-09"
+        iyy="7.6161186938241E-06"
+        iyz="-4.83109514948167E-14"
+        izz="9.82757079162358E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meerkat_description/meshes/vectornav.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meerkat_description/meshes/vectornav.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixed_3"
+    type="fixed">
+    <origin
+      xyz="-5.32524992339356E-05 0 0.0534999734969217"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="vectornav" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

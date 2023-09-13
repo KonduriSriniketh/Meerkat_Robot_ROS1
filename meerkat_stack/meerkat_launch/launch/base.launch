@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find meerkat_base)/launch/base2.launch" />
+  <!-- <include file="$(find object_detection_ros)/launch/object_detection.launch" /> -->
+  <!-- <include file="$(find zed_obj_dec_pos_tag)/launch/object_detection_zed.launch" /> -->
+</launch>

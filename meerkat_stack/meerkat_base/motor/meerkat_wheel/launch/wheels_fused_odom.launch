@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <node respawn="true" pkg="meerkat_wheel"   name="meerkat_wheel_node" type="meerkat_wheel_node">
+    <rosparam file="$(find meerkat_config)/params/drivers/odom.yaml" command="load"/>
+  </node>
+  <node respawn="true" pkg="meerkat_wheel"   name="fused_odometry_node" type="odometry_node">
+    <rosparam file="$(find meerkat_config)/params/drivers/odom.yaml" command="load"/>
+  </node>
+
+</launch>
