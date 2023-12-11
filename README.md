@@ -1,4 +1,5 @@
 # MEERKAT robot ROS1 workspace 
+*Stack implemented with ROS Noetic on Ubuntu 20.04*
 ## Teleoperation/ Robot base start-up
 navigate to meerkat_ros_ws and source the environment
 
