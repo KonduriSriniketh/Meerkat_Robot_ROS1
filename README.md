@@ -1,13 +1,28 @@
 # MEERKAT robot ROS1 workspace 
-## Teleoperation
+## Teleoperation/ Robot base start-up
 navigate to meerkat_ros_ws and source the environment
 
     cd meerkat_ros_ws/
     source devel/setup.bash
     
-command to tele_operatate meerkat
+Command to tele_operatate meerkat
 
     roslaunch meerkat_launch base.launch
+
+## WayPoint Autonomous Navigation
+- First launch the robot base mentioned above.
+- Open a new terminal, navigate to meerkat_ros_ws, and source the environment
+
+        cd meerkat_ros_ws/
+        source devel/setup.bash
+
+Command to start/launch waypoint navigation
+
+    roslaunch meerkat_launch navigation_2.launch
+
+- First, localize the robot in the RVIZ map using the 2D pose estimate.
+- In the launch file, use the **map_file** argument to change the map of the robot.
+
 
 ## zed_obj_dec_pos_tag 
 **Instructions to use the object detection package (Perception Pipeline)**
