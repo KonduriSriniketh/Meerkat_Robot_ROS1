@@ -1,4 +1,13 @@
 # MEERKAT robot ROS1 workspace 
+## Teleoperation
+navigate to meerkat_ros_ws and source the environment
+
+    cd meerkat_ros_ws/
+    source devel/setup.bash
+    
+command to tele_operatate meerkat
+
+    roslaunch meerkat_launch base.launch
 
 ## zed_obj_dec_pos_tag 
 **Instructions to use the object detection package (Perception Pipeline)**
