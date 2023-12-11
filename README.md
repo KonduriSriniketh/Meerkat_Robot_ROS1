@@ -23,7 +23,7 @@ command to tele_operatate meerkat
 ### Command to launch file
     roslaunch zed_obj_dec_pos_tag object_detection_zed.launch 
 ### Notes
-  - ***<-------No Implementation of Tracking of detected objects when the object is out of the camera frame------->***
+  - ***<---No Implementation of Tracking of detected objects when the object is out of the camera frame---->***
   - Two main Python files are present in the src/ folder of this package (DetectorNode.py & VisionPipeline.py)
   - The Launch file runs the DetectorNode.py file in src/ folder
   - The VisionPipeline.py is imported in the DetectorNode.py
